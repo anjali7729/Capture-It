@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <title>Dashboard Page</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+  <div ng-controller="dashboardController" class="container">
+    <h1 class="text-center text-white bg-dark my-2 mb-5 p-3 rounded">
+      Student Dashboard 
+      <button id="Logout" class="btn btn-danger" type="submit">LogOut</button>
+    </h1>
+    <div class="row justify-content-center">
+      <div class="col-md-3">
+        <div class="card">
+          <img src="assets/updateProfile.png" alt="Loading..">
+          <div class="card-body">
+            <h5 class="card-title">Update Profile</h5>
+            <p class="card-text">Click the button below to update your profile information.</p>
+            <button class="btn btn-primary" [routerLink]="'./update-profile'">Update Profile</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <img src="assets/viewAttendance.png" alt="Loading..">
+          <div class="card-body">
+            <h5 class="card-title">View Attendance</h5>
+            <p class="card-text">Click the button below to view your attendance records.</p>
+            <button class="btn btn-primary" [routerLink]="'./view-attendance'">View Attendance</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
